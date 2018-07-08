@@ -1,0 +1,24 @@
+.SidebarButton {
+    background-color: transparent;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border: 4px solid white;
+    border-right: none;
+    padding: 1em 1.5em 1em 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    transition: all 0.2s;
+}
+
+.SidebarButton:last-child {
+    margin-bottom: 0;
+}
+
+.SidebarButton:hover {
+    background-color: white;
+    color: #333;
+}
