@@ -1,8 +1,9 @@
 import React from 'react';
 import './go.css';
-import PomodoroState from '../components.js/PomodoroState';
-import Sidebar from '../components.js/Sidebar';
-import SidebarButton from '../components.js/SidebarButton';
+import PomodoroState from '../components/PomodoroState';
+import Sidebar from '../components/Sidebar';
+import SidebarButton from '../components/SidebarButton';
+import RingingSound from '../components/RingingSound';
 import Sound from 'react-sound';
 
 const thirtyMinutes = 25 * 60 * 1000;
@@ -94,14 +95,12 @@ class Go extends React.Component {
                             title="Trello"
                         />
                     </Sidebar>
-                    <Sound
-                        url="/static/metronome.mp3"
+                    <RingingSound
                         playStatus={
                             this.state.isAlarmOn
                                 ? Sound.status.PLAYING
                                 : Sound.status.STOPPED
                         }
-                        loop
                     />
                 </PomodoroState>
             );
@@ -128,6 +127,13 @@ class Go extends React.Component {
                             title="Whatsapp"
                         />
                     </Sidebar>
+                    <RingingSound
+                        playStatus={
+                            this.state.isAlarmOn
+                                ? Sound.status.PLAYING
+                                : Sound.status.STOPPED
+                        }
+                    />
                 </PomodoroState>
             );
         }
